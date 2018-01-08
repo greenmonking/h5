@@ -1,0 +1,11 @@
+{
+	"pageData":[
+		{
+			"id":"page1",
+			"html":'<h1 class="ani editText" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.3s">春季招生</h1>
+				    	<!--<a href="#popover" id="openPopover" class="mui-btn mui-btn-primary mui-btn-block">打开弹出菜单</a>-->
+				    	<p style="color:#fff;font-size:18px;margin-top:60px;text-align: center;" class="editText">你说的那是多少了看电视了</p>
+				    	<img src="images/pen.png" class="imageup img ani editImg" swiper-animate-effect="fadeIn" swiper-animate-delay="0.3s" swiper-animate-duration="0.5s"/>'
+		}
+	]
+}

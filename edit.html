@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>edit</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="./styles/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="./styles/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/index.css"/>
+		<style type="text/css">
+			#container{
+				width: 80%;
+				height: 80%;
+				margin:0 auto;
+			}
+			.popover .mui-popover-arrow{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+				    <div class="swiper-slide">
+				    	<h1 class="ani editText" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.3s">春季招生</h1>
+				    	<!--<a href="#popover" id="openPopover" class="mui-btn mui-btn-primary mui-btn-block">打开弹出菜单</a>-->
+				    	<p style="color:#fff;font-size:18px;margin-top:60px;text-align: center;" class="editText">你说的那是多少了看电视了</p>
+				    	<img src="images/pen.png" class="imageup img ani editImg" swiper-animate-effect="fadeIn" swiper-animate-delay="0.3s" swiper-animate-duration="0.5s"/>
+				    </div>
+				    <div class="swiper-slide">
+				    	<img src="images/img1.jpg" class="img1"/>
+				    </div>
+				    <div class="swiper-slide">
+				    	<img src="images/img2.jpg" class="img2" style="left:4%;top:30%;"/>
+				    	<img src="images/img2.jpg" class="img2" style="right:4%;top:30%;"/>
+				    </div>
+				    
+				</div>
+			</div>
+			<!--<ul id="footer">
+				<li>编辑</li>
+				<li>背景</li>
+				<li>暂存</li>
+				<li>预览</li>
+			</ul>-->
+			<nav class="mui-bar mui-bar-tab">
+				<a class="mui-tab-item" href="#Popover_0">编辑</a>
+				<a class="mui-tab-item" href="#Popover_1">背景</a>
+				<a class="mui-tab-item" href="#Popover_2">暂存</a>
+				<a class="mui-tab-item" href="#Popover_3">预览</a>
+			</nav>
+			<div id="Popover_0" class="mui-popover mui-bar-popover" style="width:106px;display: block; top: 475px; left: 6px;">
+				<div class="mui-popover-arrow mui-bottom" style="left:36px"></div>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell"><a href="#" class="deletePage">删页</a>
+					</li>
+					<li class="mui-table-view-cell"><a href="#" class="addPage">加页</a>
+					</li>
+					<li class="mui-table-view-cell"><a href="#">音乐</a>
+					</li>
+				</ul>
+			</div>
+			<div id="Popover_1" class="mui-popover mui-bar-popover popover"></div>
+			<div id="Popover_2" class="mui-popover mui-bar-popover popover"></div>
+			<div id="Popover_3" class="mui-popover mui-bar-popover popover"></div>
+		</div>
+		<!--文本编辑框-->
+		<div class="createPrompt">
+			<!--<div id="editBox">
+				<textarea name="" rows="" cols="" placeholder="写点什么。。"></textarea>
+				<p><span class="valueLen">13</span>/200</p>
+				<div class="btn">
+					<button type="button" class="mui-btn mui-btn-outlined">取消</button>
+					<button type="button" class="mui-btn mui-btn-outlined">确认</button>
+				</div>
+			</div>
+			<div id="editBoxZoom"></div>-->
+		</div>
+		
+		
+		<script src="./libs/jquery-3.2.1.min.js"></script>
+		<script src="./libs/swiper.animate1.0.2.min.js"></script>
+		<script src="./libs/swiper-3.4.2.min.js"></script>
+		<script src="./libs/mui.js"></script>
+		<script type="text/javascript" src="./scripts/edit.js"></script>
+	</body>
+</html>
