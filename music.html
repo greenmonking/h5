@@ -1,9 +1,170 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>音乐列表</title>
 		<meta charset="UTF-8">
-		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="./styles/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="./styles/mui.min.css"/>
+		<style type="text/css">
+			html,body{
+				height: 100%;
+			}
+			.container{
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+			.mui-control-content{
+				height: 150px;
+			}
+			#containerBox ul > .active-music{
+				color: #fff;
+			    background-color: #0062cc;
+			}
+			#containerBox li>.playOrPause{
+				display:inline-block;
+				width:32px;
+				height: 32px;
+				transform: translateY(-50%);
+				position: absolute;
+				top:50%;
+				right:15px;
+			}
+			#containerBox li>.songList{
+				display:inline-block;
+				width: 80%;
+				white-space: nowrap;
+			}
+			.theanimation{
+			  animation:theanimation 10s infinite linear;
+			  -webkit-animation:theanimation 10s infinite linear;
+			}
+			@keyframes theanimation{
+			 from {
+			  transform:translateX(0%);
+			 } 
+			 to {
+			  transform:translateX(-100%);
+			 } 
+			}
+			@-webkit-keyframes theanimation{ 
+			 from {
+			  -webkit-transform:translateX(0%);
+			 } 
+			 to {
+			  -webkit-transform:translateX(-100%);
+			 }
+			}
+			
+			#containerBox li>.playOrPause>img{
+				width: 100%;
+				height: 100%;
+			}
+			#containerBox .mui-control-content ul{
+				position: relative;
+			    margin-top: 0;
+			    margin-bottom: 0;
+			    padding-left: 0;
+			    list-style: none;
+			    background-color: #fff;
+			}
+			#containerBox .mui-control-content ul>li{
+				position: relative;
+			    overflow: hidden;
+			    height: 44px;
+			    padding: 11px 15px;
+			    border-bottom: 1px solid #c8c7cc;
+			    white-space:nowrap;
+			    -webkit-transform: translate3d(0, 0, 0); /* 3d渲染，开启硬件加速 */
+			    transform: translate3d(0, 0, 0);
+			    
+			    /*text-overflow:ellipsis;
+			    white-space:nowrap;*/
+			    /*overflow:hidden;*/
+			}
+			.addBackgroundMusic{
+				position: absolute;
+				bottom: 30px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.addBackgroundMusic:enabled:active{
+				color: #333;
+				background-color: #fff;
+			    /*color: #fff;
+			    border:1px solid #0062cc;
+    			background-color: #0062cc;*/
+			}
+			.mui-toast-message{
+				padding: 10px 10px;
+			}
+		</style>
 	</head>
 	<body>
+		<div class="container">
+			<div class="mui-content">
+				<div style="padding: 10px 10px;">
+					<div id="segmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<a class="mui-control-item mui-active" href="#item1">抒情</a>
+						<a class="mui-control-item" href="#item2">安静</a>
+						<a class="mui-control-item" href="#item3">欢快</a>
+						<a class="mui-control-item" href="#item4">动感</a>
+					</div>
+				</div>
+				<div id="containerBox">
+					<div id="item1" class="mui-control-content mui-active">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll" >
+								<ul>
+									<li>
+										<span class="songList">Audio Machine - Breath and Life.mp3</span>
+										<span class="playOrPause"><img src="./images/pause.png"/><audio loop src="./music/Audio Machine - Breath and Life.mp3"></audio></span>
+									</li>
+									<li>
+										<span class="songList">Pianoboy - The truth that you leave.mp3</span>
+										<span class="playOrPause"><img src="./images/pause.png"/><audio loop src="./music/Pianoboy - The truth that you leave.mp3"></audio></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item2" class="mui-control-content">
+						<ul>
+							<li>
+								<span class="songList">Audio Machine - Breath and Life.mp3</span>
+								<span class="playOrPause"><img src="./images/pause.png"/><audio loop src="./music/Audio Machine - Breath and Life.mp3"></audio></span>
+							</li>
+						</ul>
+					</div>
+					<div id="item3" class="mui-control-content">
+						<ul>
+							<li>
+								<span class="songList">Audio Machine - Breath and Life.mp3</span>
+								<span class="playOrPause"><img src="./images/pause.png"/><audio loop src="./music/Audio Machine - Breath and Life.mp3"></audio></span>
+							</li>
+						</ul>
+					</div>
+					<div id="item4" class="mui-control-content">
+						<ul>
+							<li>
+								<span class="songList">Audio Machine - Breath and Life.mp3</span>
+								<span class="playOrPause"><img src="./images/pause.png"/><audio loop src="./music/Audio Machine - Breath and Life.mp3"></audio></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+			<button type="button" class="mui-btn mui-icon mui-icon-plus addBackgroundMusic">添加该歌曲为背景音乐</button>
+		</div>
+		
+		
+		<script src="./libs/jquery-3.2.1.min.js"></script>
+		<script src="./libs/swiper.animate1.0.2.min.js"></script>
+		<script src="./libs/swiper-3.4.2.min.js"></script>
+		<script src="./libs/mui.js"></script>
+		<script type="text/javascript" src="./scripts/music.js"></script>
 	</body>
 </html>

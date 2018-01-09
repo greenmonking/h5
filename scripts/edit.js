@@ -56,6 +56,13 @@ $(function(){
 	})
 	
 	/**
+	 *点击跳转音乐列表
+	 */
+	$(document).on("click", ".addBackgroundMusic",function(event) {
+		window.location.href='./music.html';
+	});
+	
+	/**
 	 *点击编辑文本
 	 */
 	$(document).on("click", ".editText",function(event) {

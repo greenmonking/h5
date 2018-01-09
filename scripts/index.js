@@ -24,10 +24,6 @@ $(function(){
 	 */
 	$(document).on("click", "#edit",function(event) {
 		window.location.href='./edit.html'; 
-//		$('#edit').hide();
-//		$('#share').hide();
-//		$('.editableText').addClass('editText');
-//		$('.editableImg').addClass('editImg');
 	});
 	
 
