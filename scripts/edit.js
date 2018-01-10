@@ -16,6 +16,44 @@ $(function(){
 	    } 
 	})
 	
+	/**
+	 * 二级导航的显隐控制
+	 */
+	$(document).on('click','.editable',function(ev){
+		$('#subNav').toggle()
+	})
+	$(document).on('click','#footer>li:not(.editable)',function(ev){
+		console.log(ev.target)
+		$('#subNav').hide()
+	})
+	
+	
+	/**
+	 * 保存场景编辑
+	 */
+	$(document).on('click','#saveScene',function(ev){
+		
+		var btnArray = ['取消', '确定'];
+        mui.confirm('保存编辑？', '信息提示', btnArray, function(e) {
+            if (e.index == 1) {
+            	//确定保存
+            	
+            	// 消息表示
+				mui.toast('保存成功', {
+					duration: 'long',
+					type: 'div'
+				});
+            } else {
+            	//取消保存
+//              alert(2)
+            }
+        })
+        
+        
+        
+	})
+	
+	
 	
 	/**
 	 * 删除当前页

@@ -17,6 +17,72 @@
 			.popover .mui-popover-arrow{
 				display: none;
 			}
+			#footer{
+			    bottom: 0;
+			    display: table;
+			    width: 100%;
+			    height: 50px;
+		        background-color: #f7f7f7;
+		        box-shadow: 0 0 1px rgba(0,0,0,.85);
+			    padding: 0;
+			    table-layout: fixed;
+			    border-top: 0;
+			    border-bottom: 0;
+			    position: fixed;
+			    z-index: 10;
+			    right: 0;
+			    left: 0;
+			}
+			#footer>li{
+				display: table-cell;
+			    overflow: hidden;
+			    width: 1%;
+			    height: 50px;
+			    text-align: center;
+			    vertical-align: middle;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			    color: #929292;
+			}
+			#footer>li:hover{
+				/*background-color:#007aff ;*/
+				color: #007aff;
+			}
+			#footer>li>div{
+				width: 106px;
+			    display: none;
+			    /*top: 475px;*/
+			    bottom:60px;
+			    left: 5px;
+			    opacity: 1;
+			    position: absolute;
+    			z-index: 999;
+    			border-radius: 7px;
+    			background-color: #f7f7f7;
+    			box-shadow: 0 0 15px rgba(0,0,0,.1);
+			}
+			#footer .subNav{
+			    width: 106px;
+			    overflow: auto;
+			    max-height: 300px;
+			    margin-bottom: 0;
+			    border-radius: 7px;
+			    background-color: #f7f7f7;
+			    background-image: none;
+			    position: relative;
+    			margin-top: 0;
+			}
+			#footer .subNav>li{
+				padding:11px 15px;
+				border-bottom: 1px solid #c8c7cc;
+			}
+			#footer .subNav>li>a{
+				color:#000;
+			}
+			#footer .subNav>li>a:hover{
+				color: #007aff;
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -40,17 +106,26 @@
 				    
 				</div>
 			</div>
-			<!--<ul id="footer">
-				<li>编辑</li>
+			<ul id="footer">
+				<li class="editable">
+					编辑
+					<div id="subNav">
+						<ul class="subNav">
+							<li><a href="#" class="deletePage">删页</a></li>
+							<li><a href="#" class="addPage">加页</a></li>
+							<li><a href="#" class="addBackgroundMusic">音乐</a></li>
+						</ul>
+					</div>
+				</li>
 				<li>背景</li>
-				<li>暂存</li>
-				<li>预览</li>
-			</ul>-->
-			<nav class="mui-bar mui-bar-tab">
-				<a class="mui-tab-item" href="#Popover_0">编辑</a>
+				<li id="saveScene">暂存</li>
+				<li id="previewScene">预览</li>
+			</ul>
+			<!--<nav class="mui-bar mui-bar-tab">-->
+				<!--<a class="mui-tab-item" href="#Popover_0">编辑</a>
 				<a class="mui-tab-item" href="#Popover_1">背景</a>
-				<a class="mui-tab-item" href="#Popover_2" id="save">暂存</a>
-				<a class="mui-tab-item" href="#Popover_3" id="preview">预览</a>
+				<a class="mui-tab-item" href="#Popover_2" id="saveScene">暂存</a>
+				<a class="mui-tab-item" href="#Popover_3" id="previewScene">预览</a>
 			</nav>
 			<div id="Popover_0" class="mui-popover mui-bar-popover" style="width:106px;display: block; top: 475px; left: 6px;">
 				<div class="mui-popover-arrow mui-bottom" style="left:36px"></div>
@@ -62,7 +137,7 @@
 					<li class="mui-table-view-cell"><a href="#" class="addBackgroundMusic">音乐</a>
 					</li>
 				</ul>
-			</div>
+			</div>-->
 			<div id="Popover_1" class="mui-popover mui-bar-popover popover"></div>
 			<div id="Popover_2" class="mui-popover mui-bar-popover popover"></div>
 			<div id="Popover_3" class="mui-popover mui-bar-popover popover"></div>
