@@ -28,9 +28,11 @@ $(function(){
 			});
 			
 		}else{
+
+			imgUrl = $('.active-music .songList').text();
 			
-			imgUrl = $('.active-music').find('audio')[0].src;
-			window.location.href='./edit.html?imgUrl=' + imgUrl; 
+			localStorage.setItem("media",'./music/' + imgUrl)
+			window.location.href='./edit.html'; 
 		}
 
 	})
